@@ -1,27 +1,29 @@
-Welcome to the Mink documentation!
-==================================
+Bem vindo a documentação do Mink!
+=================================
 
-One of the most important parts in the web is a browser. Browser is the window
-through which web users interact with web applications and other users. Users
-are always talking with web applications through browsers.
+Uma das partes mais importantes da web é o navegador. Navegador é a janela através
+dela usuários web interagem com aplicações web e outros usuários. Usuários estão 
+sempre falando com aplicações web através dos navegadores.
 
-So, in order to test that our web application behaves correctly, we need
-a way to simulate this interaction between the browser and the web application
-in our tests. We need a **Mink**.
+Então, a fim de testar se aquela nossa aplicação web se comporta corretamente, 
+nós precisamos de uma forma para simular esta interação entre o navegador e a 
+aplicação web em nossos testes. Nós precisamos do **Mink**.
 
-Mink is an open source browser controller/emulator for web applications, written
-in PHP 5.3.
+O Mink é um navegador open source controlador/emulador para aplicações web, 
+escrito em PHP 5.3.
 
-Read :doc:`/at-a-glance` to learn more about Mink and why you need it.
+Leia :doc:`de-relance` para aprender mais sobre o Mink e porque você precisa dele.
 
-Installation
-------------
 
-Mink is a php 5.3 library that you'll use inside your test suites or project.
-Before you begin, ensure that you have at least PHP 5.3.1 installed.
+Instalação
+----------
 
-The recommended way to install Mink with all its dependencies is through
-`Composer`_:
+Mink é uma biblioteca php 5.3 que você vai usar dentro de suas suites de teste 
+ou projeto. Antes de você começar, garanta que você tem o PHP 5.3.1 ou superior 
+instalado.
+
+A forma recomendada para instalar o Mink com todas as suas dependências é através 
+do `Composer`_:
 
 .. code-block:: bash
 
@@ -29,13 +31,13 @@ The recommended way to install Mink with all its dependencies is through
 
 .. note::
 
-    For local installations of composer you must call it like this:
+    Para instalações locais do composer você precisa dizer a ele algo como isto:
     ``$ php composer.phar require behat/mink`` .
-    In this case you must use the different call 
-    ``php composer.phar`` everywhere instead of the simple command ``composer``.
+    Neste caso você precisa utilizar uma chamada diferente
+    ``php composer.phar`` em todos os lugares ao invés de simplesmente o comando ``composer``.
 
-Everything will be installed inside ``vendor`` folder.
-Finally, include Composer autoloading script to your project:
+Tudo será instalado dentro da pasta ``vendor``.
+Finalmente, inclua o script auto carregável Composer ao seu projeto:
 
 .. code-block:: php
 
@@ -43,9 +45,9 @@ Finally, include Composer autoloading script to your project:
 
 .. note::
 
-    By default, Mink will be installed with no drivers. In order to
-    be able to use additional drivers, you should install them (through composer).
-    Require the appropriate dependencies:
+    Por padrão, o Mink será instalado sem drivers. A fim de ser capaz de utilizar 
+    divers adicionais, você deve instalá-los (através do composer).
+    Eixija as dependencias apropriadas:
 
     - GoutteDriver - ``behat/mink-goutte-driver``
     - Selenium2Driver - ``behat/mink-selenium2-driver``
@@ -55,34 +57,34 @@ Finally, include Composer autoloading script to your project:
     - SahiDriver - ``behat/mink-sahi-driver``
     - WUnitDriver - ``behat/mink-wunit-driver``
 
-    If you're newcomer or just don't know what to choose, you should probably
-    start with the GoutteDriver and the Selenium2Driver (you will be able
-    to tuneup it later):
+    Se você é novato ou simplesmente você não sabe qual escolher, você deverá 
+    provavelmente iniciar com o GoutteDriver e o Selenium2Driver (você poderá 
+    substituí-lo depois):
 
-Guides
+Guias
 ------
 
-Learn Mink with the topical guides:
+Aprenda Mink com as guias de tópicos:
 
 .. toctree::
     :maxdepth: 1
 
-    at-a-glance
-    guides/session
-    guides/traversing-pages
-    guides/manipulating-pages
-    guides/interacting-with-pages
+    de-relance
+    guides/sessao
+    guides/atravessando-paginas
+    guides/manipulando-paginas
+    guides/interagindo-com-paginas
     guides/drivers
-    guides/managing-sessions
-    contributing
+    guides/gerindo-sessoes
+    contribuindo
 
-Testing Tools Integration
--------------------------
+Ferramentas de Teste de Integração
+----------------------------------
 
-Mink has integrations for several testing tools:
+O mink tem integrações com muitas ferramentas de teste:
 
-- `Behat`_ through the `Behat MinkExtension`_
-- `PHPUnit`_ through the `phpunit-mink package`_
+- `Behat`_ através da `Behat MinkExtension`_
+- `PHPUnit`_ através do `phpunit-mink package`_
 
 .. _Behat: http://behat.org
 .. _Behat MinkExtension: https://github.com/Behat/MinkExtension
