@@ -76,7 +76,6 @@ Aprenda Mink com as guias de tópicos:
     guides/interagindo-com-paginas
     guides/drivers
     guides/gerindo-sessoes
-    contribuindo
 
 Ferramentas de Teste de Integração
 ----------------------------------
