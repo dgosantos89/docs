@@ -1,17 +1,5 @@
-Mink Documentation
-==================
+Documentação do Mink
+====================
 
-This repository contains the documentation for the [Mink](https://github.com/Behat/Mink) project. The [rendered documentation](http://mink.readthedocs.org/en/latest/index.html) is hosted at [Read the Docs](https://readthedocs.org).
-
-Contribute
-----------
-
-Contributions to the documentation are always welcome!
-
-* Report any bugs or issues you find on the [issue tracker](https://github.com/minkphp/docs/issues).
-* You can grab the source code in the [Git repository](https://github.com/minkphp/docs).
-
-License
--------
-
-The documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+Este repositório contém a documentação não oficial do projeto [Mink](https://github.com/Behat/Mink) em português. 
+A [documentação renderizada](docbehat.readthedocs.io) está hospedado no [Read the Docs](https://readthedocs.org).
