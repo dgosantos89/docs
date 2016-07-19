@@ -1,15 +1,15 @@
 Drivers
 =======
 
-How does Mink provide a consistent API for very different browser library
-types, often written in different languages? Through drivers! A Mink driver
-is a simple class, that implements ``Behat\Mink\Driver\DriverInterface``.
-This interface describes bridge methods between Mink and real browser emulators.
-Mink always talks with browser emulators through its driver. It doesn't know
-anything about how to start/stop or traverse page in that particular browser
-emulator. It only knows what driver method it should call in order to do this.
+Como é que o Mink fornece uma API consistente para vários tipos de bibliotecas 
+de navegadores diferentes, frequentemente escritas em diferentes linguagens? 
+Através dos drivers! Um driver Mink é uma classe simples, que implementa 
+``Behat\Mink\Driver\DriverInterface``. Esta interface descreve metodos pontes 
+entre o Mink e os emuladores de navegadores reais. Ele não sabe nada sobre como 
+inicar/parar ou atravessar página nesse emulador de navegador em particular. Ele 
+somente sabe que método do driver que deve chamar para fazer isso.
 
-Mink comes with six drivers out of the box:
+O Mink vem com seis drivers fora da caixa:
 
 .. toctree::
     :maxdepth: 1
@@ -23,32 +23,32 @@ Mink comes with six drivers out of the box:
 
 .. _driver-feature-support:
 
-Driver Feature Support
-----------------------
+Suporte a recursos do driver
+----------------------------
 
-Although Mink does its best on removing browser differences between different
-browser emulators, it can't do much in some cases. For example, BrowserKitDriver
-cannot evaluate JavaScript and Selenium2Driver cannot get the response status
-code. In such cases, the driver will always throw a meaningful
-``Behat\Mink\Exception\UnsupportedDriverActionException``.
+Apesar do Mink faça o seu melhor em remover as diferenças entre navegador e 
+diferentes emuladores de navegador, ele não pode fazer muito em alguns casos. 
+Por exemplo, BrowserKitDriver não avalia JavaScript e Slenium2Driver não consegue 
+pegar código dos status das respostas. Nestes casos, o driver sempre irá lançar 
+uma ``Behat\Mink\Exception\UnsupportedDriverActionException`` exceção.
 
-======================  =================  =========  ======  ========  ====
-Feature                 BrowserKit/Goutte  Selenium2  Zombie  Selenium  Sahi
-======================  =================  =========  ======  ========  ====
-Page traversing         Yes                Yes        Yes     Yes       Yes
-Form manipulation       Yes                Yes        Yes     Yes       Yes
-HTTP Basic auth         Yes                No         Yes     No        No
-Windows management      No                 Yes        No      Yes       Yes
-iFrames management      No                 Yes        No      Yes       No
-Request headers access  Yes                No         Yes     No        No
-Response headers        Yes                No         Yes     No        No
-Cookie manipulation     Yes                Yes        Yes     Yes       Yes
-Status code access      Yes                No         Yes     No        No
-Mouse manipulation      No                 Yes        Yes     Yes       Yes
-Drag'n Drop             No                 Yes        No      Yes       Yes
-Keyboard actions        No                 Yes        Yes     Yes       Yes
-Element visibility      No                 Yes        No      Yes       Yes
-JS evaluation           No                 Yes        Yes     Yes       Yes
-Window resizing         No                 Yes        No      No        No
-Window maximizing       No                 Yes        No      Yes       No
-======================  =================  =========  ======  ========  ====
+=================================  =================  =========  ======  ========  ====
+Funcionalidade                     BrowserKit/Goutte  Selenium2  Zombie  Selenium  Sahi
+=================================  =================  =========  ======  ========  ====
+Atravessar páginas                 Sim                Sim        Sim     Sim       Sim
+Manipular Formulários              Sim                Sim        Sim     Sim       Sim
+Autenticação Básica HTTP           Sim                Não        Sim     Não       Não
+Gestão de janelas                  Não                Sim        Não     Sim       Sim
+Gestão de iFrames                  Não                Sim        Não     Sim       Não
+Acessar cabeçalhos de solicitação  Sim                Não        Sim     Não       Não
+Cabeçalhos de resposta             Sim                Não        Sim     Não       Não
+Manipular Cookies                  Sim                Sim        Sim     Sim       Sim
+Acessar códgigo de status          Sim                Não        Sim     Não       Não
+Manipular mouse                    Não                Sim        Sim     Sim       Sim
+Arrastar e largar                  Não                Sim        Não     Sim       Sim
+Ações de teclado                   Não                Sim        Sim     Sim       Sim
+Visualizar elementos               Não                Sim        Não     Sim       Sim
+Avaliar JS                         Não                Sim        Sim     Sim       Sim
+Redimensionar janela               Não                Sim        Não     Não       Não
+Maximizar janela                   Não                Sim        Não     Sim       Não
+=================================  =================  =========  ======  ========  ====
