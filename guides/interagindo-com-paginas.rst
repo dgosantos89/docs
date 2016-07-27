@@ -1,139 +1,137 @@
-Interacting with Pages
-======================
+Interagindo com Páginas
+=======================
 
-Most usages of Mink will involve working with the page opened in your browser.
-The Mink Element API lets you interact with elements of the page.
+A maioria dos usos de Mink envolverá trabalhar com páginas abertas em seu navegador.
+O elemento Mink API permite você interagir com elementos da página.
 
-Interacting with Links and Buttons
-----------------------------------
+Interagindo com Links e Botões
+------------------------------
 
-The ``NodeElement::click`` and ``NodeElement::press`` methods let you click
-the links and press the buttons on the page.
+Os métodos ``NodeElement::click`` e ``NodeElement::press`` permitem você clicar 
+nos links e apertar os botões na página.
 
 .. note::
 
-    These methods are actually equivalent internally (pressing a button involves
-    clicking on it). Having both methods allows to keep the code more readable.
+    Estes métodos atualmente são equivalentes internamente (pressionar um botão
+    envolve clicá-lo). Tento ambos os métodos permitindo manter o código mais legível.
 
-.. _interacting-with-forms:
+.. _interagindo-com-formularios:
 
-Interacting with Forms
-----------------------
+Interagindo com formulários
+---------------------------
 
-The ``NodeElement`` class has a set of methods allowing to interact with
-forms:
+A classe ``NodeElement`` tem um conjunto de métodos permitindo interagir 
+com formulários:
 
 ``NodeElement::getValue``
-    gets the value of a form field. The value depends on the type of field:
+    pega o valor de um campo do formulário. O valor depende do tipo do campo:
 
-    - the value of the selected option for single select boxes (or ``null``
-      when none are selected);
-    - an array of selected option values for multiple select boxes;
-    - the value of the checkbox field when checked, or ``null`` when not
-      checked;
-    - the value of the selected radio button in the radio group for radio
-      buttons;
-    - the value of the field for textual fields and textareas;
-    - an undefined value for file fields (because of browser limitations).
+    - o valor da opção selecionada para caixas de seleção individuais (ou 
+    ``null`` quando nenhuma é selecionada);
+    - um array dos valores das opções selecionadas para multiplas caixas de seleção;
+    - o valor do campo checkbox quando checado, ou ``null`` quando não checado;
+    - o valor do radio button selecionado no grupo de radio para radio buttons;
+    - o valor do campo para campos de texto e textareas;
+    - um valor indefinido para campos de arquivos (devido as limitações do navegador).
 
 ``NodeElement::setValue``
-    sets the value of a form field
+    coloca o valor de um campo do formulário
 
-    - for a file field, it should be the absolute path to the file;
-    - for a checkbox, it should be a boolean indicating whether it is checked;
-    - for other fields, it should match the behavior of ``getValue``.
+    - para um campo de arquivo, deveria ser o caminho para o arquivo;
+    - para um checkbox, deveria ser um booleano indicando se está checado;
+    - para outros campos, deveria corresponder o comportamento de ``getValue``.
 
 ``NodeElement::isChecked``
-    reports whether a radio button or a checkbox is checked.
+    informa se um radio button ou um checkbox está checado.
 
 ``NodeElement::isSelected``
-    reports whether an ``<option>`` element is selected.
+    informa se um elemento ``<option>`` está selecionado.
 
 ``NodeElement::check``
-    checks a checkbox field.
+    checa um campo checkbox.
 
 ``NodeElement::uncheck``
-    unchecks a checkbox field.
+    descheca um campo checkbox.
 
 ``NodeElement::selectOption``
-    select an option in a select box or in a radio group.
+    seleciona uma opção em uma caixa de seleção ou em um radio group.
 
 ``NodeElement::attachFile``
-    attaches a file in a file input.
+    anexa um arquivo em uma em uma entrada de arquivo.
 
 ``NodeElement::submit``
-    submits the form.
+    submete o formulário.
 
-Interacting with the Mouse
---------------------------
+Interagindo com o mouse
+-----------------------
 
-The ``NodeElement`` class offers a set of methods allowing to interact with
-the mouse:
+A classe ``NodeElement`` oferece um conjunto de métodos que permitem interagir 
+com o mouse:
 
 ``NodeElement::click``
-    performs a click on the element.
+    executa um clique no elemento.
 
 ``NodeElement::doubleClick``
-    performs a double click on the element.
+    executa um clique duplo no elemento.
 
 ``NodeElement::rightClick``
-    performs a right click on the element.
+    executa um clique com o botão direito no elemento.
 
 ``NodeElement::mouseOver``
-    moves the mouse over the element.
+    move o mouse para cima do elemento.
 
-Interacting with the Keyboard
------------------------------
+Interagindo com o teclado
+-------------------------
 
-Mink lets you interact with the keyboard thanks to the ``NodeElement::keyDown``,
-``NodeElement::keyPress`` and ``NodeElement::keyUp`` methods.
+O mink permite você interagir com o teclado graças aos métodos ``NodeElement::keyDown``,
+``NodeElement::keyPress`` e ``NodeElement::keyUp``.
 
-Manipulating the Focus
-----------------------
+Manipulando o Foco
+------------------
 
-The ``NodeElement`` class lets you give and remove focus on the element thanks
-to the ``NodeElement::focus`` and ``NodeElement::blur`` methods.
+A classe ``NodeElement`` permite você dar e remover o foco em um elemento 
+graças aos métodos ``NodeElement::focus`` e ``NodeElement::blur``.
 
-Drag'n'Drop
------------
+Clica e arrasta
+---------------
 
-Mink supports drag'n'drop of one element onto another:
+Mink provê o clica e arrasta de um elemento para outro:
 
 .. code-block:: php
 
-    $dragged = $page->find(...);
-    $target = $page->find(...);
+    $arrastado = $page->find(...);
+    $alvo = $page->find(...);
 
-    $dragged->dragTo($target);
+    $arrastado->dragTo($alvo);
 
-Shortcut Methods
-----------------
+Métodos de atalho
+-----------------
 
-The ``TraversableElement`` class provides a few shortcut methods allowing
-to find a child element on the page and perform an action on it immediately:
+A classe ``TraversableElement`` provê alguns poucos métodos de atalho 
+permitindo procurar um elemento filho na página e executar uma ação imediatamente:
 
 ``TraversableElement::clickLink``
-    Looks for a link (see findLink) and clicks on it.
+    Olha para um link (veja findLink) e clica nele.
 
 ``TraversableElement::pressButton``
-    Looks for a button (see findButton) and presses on it.
+    Olha para um botão (veja findButton) e o pressiona.
 
 ``TraversableElement::fillField``
-    Looks for a field (see findField) and sets a value in it.
+    Olha para um campo (veja findField) e coloca um valor nele.
 
 ``TraversableElement::checkField``
-    Looks for a checkbox (see findField) and checks it.
+    Olha para um checkbox (veja findField) e checa ele.
 
 ``TraversableElement::uncheckField``
-    Looks for a checkbox (see findField) and unchecks it.
+    Olha para um checkbox (veja findField) e descheca ele.
 
 ``TraversableElement::selectFieldOption``
-    Looks for a select or radio group (see findField) and selects a choice in it.
+    Olha para um select ou radio group (veja findField) e seleciona uma opção.
 
 ``TraversableElement::attachFileToField``
-    Looks for a file field (see findField) and attach a file to it.
+    Olha para um campo de arquivo (veja findField) e anexa um arquivo a ele.
 
 .. note::
 
-    All these shortcut methods are throwing an ``ElementNotFoundException``
-    in case the child element cannot be found.
+    Todos estes métodos de atalho lançam uma ``ElementNotFoundException``
+    no caso do elemento filho não ser encontrado.
