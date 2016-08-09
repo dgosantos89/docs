@@ -1,13 +1,13 @@
 BrowserKitDriver
 ================
 
-BrowserKitDriver provides a bridge for the `Symfony BrowserKit`_ component.
-BrowserKit is a browser emulator provided by the `Symfony project`_.
+BrowserKitDriver provê uma ponte para o componente `Symfony BrowserKit`_.
+BrowserKit é um emulador de navegador fornecido pelo `Symfony project`_.
 
-Installation
-------------
+Instalação
+----------
 
-BrowserKitDriver is a pure PHP library available through Composer:
+BrowserKitDriver é uma biblioteca PHP pura disponível através do Composer:
 
 .. code-block:: bash
 
@@ -15,18 +15,17 @@ BrowserKitDriver is a pure PHP library available through Composer:
 
 .. note::
 
-    The BrowserKit component only provides an abstract implementation. The
-    actual implementation are provided by other projects, like `Goutte`_
-    or the `Symfony HttpKernel`_ component.
+    O componente BrowserKit somente provê uma implementação abstrata. As 
+    implementações atuais são fornecidas por outros projetos, como `Goutte`_ 
+    ou o componente `Symfony HttpKernel`_.
 
-    If you are using Goutte, you should use the special :doc:`/drivers/goutte`
-    which ensures full compatibility for Goutte due to an edge case in Goutte.
+    Se você está usando Goutte, você deve usar o especial :doc:`/drivers/goutte` 
+    que garante completa compatibilidade com o Goutte devido um caso extremo no Goutte.
 
-Usage
------
+Uso
+---
 
-In order to talk with BrowserKit, you should instantiate a
-``Behat\Mink\Driver\BrowserKitDriver``:
+Afim de falar conversar com o BrowserKit, você deve instanciar um ``Behat\Mink\Driver\BrowserKitDriver``:
 
 .. code-block:: php
 
