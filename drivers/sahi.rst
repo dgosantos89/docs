@@ -1,41 +1,42 @@
 SahiDriver
 ==========
 
-SahiDriver provides a bridge for the `Sahi`_ browser controller. Sahi is
-a new JS browser controller, that fast replaced old Selenium testing suite.
-It's both easier to setup and to use than classical Selenium. It has a GUI
-installer for each popular operating system out there and is able to control
-every systems browser through a special bundled proxy server.
+O SahiDriver fornece uma ponte para o controlador de navegador `Sahi`_. 
+Sahi é um novo controlador de navegador JS, que substituiu rapidamente 
+a velha suite de testes Selenium. É tão mais fácil configurar e usar do 
+que o Selenium classico. Ele tem um instalador GUI para cada sistema 
+operacional lá fora e é capaz de controlar cada sistema navegador através 
+de um servidor de proxy especial empacotado.
 
-Installation
+Instalação
 ------------
 
-SahiDriver is available through Composer:
+SahiDriver está disponível através do Composer:
 
 .. code-block:: bash
 
     $ composer require behat/mink-sahi-driver
 
-In order to talk with a real browser through Sahi, you should install and
-configure Sahi first:
+Afim de falar com um navegador real através do Sahi, você deve instalar e
+configurar o Sahi primeiramente:
 
-1. Download and run the Sahi jar from the `Sahi project website`_ and run
-   it. It will run the installer, which will guide you through the installation
-   process.
+1. Faça o download e execute o jar do Sahi do `site do projeto Sahi`_ e 
+   o execute. Ele irá executar o instalador, que irá lhe guiar através do 
+   processo de instalação.
 
-2. Run Sahi proxy before your test suites (you can start this proxy during
-   system startup):
+2. Execute o proxy Sahi antes das suas suites de teste (você pode iniciar 
+   este proxy durante a inicialização do sistema):
 
     .. code-block:: bash
 
         cd $YOUR_PATH_TO_SAHI/bin
         ./sahi.sh
 
-Usage
------
+Uso
+---
 
-After installing Sahi and running the Sahi proxy server, you will be able
-to control it with ``Behat\Mink\Driver\SahiDriver``:
+Depois de instalar o Sahi e executar o servidor de proxy Sahi, você estará 
+hábil a o controlar com ``Behat\Mink\Driver\SahiDriver``:
 
 .. code-block:: php
 
@@ -43,12 +44,12 @@ to control it with ``Behat\Mink\Driver\SahiDriver``:
 
 .. note::
 
-    Notice, that first argument of ``SahiDriver`` is always a browser name,
-    `supported by Sahi`_.
+    Aviso, que o primeiro argumento do ``SahiDriver`` sempre será o nome do 
+    navegador, `suportado pelo Sahi`_.
 
-If you want more control during the driver initialization, like for example
-if you want to configure the driver to talk with a proxy on another machine,
-use the more verbose version with a second client argument:
+Se você quiser maior controle durante a inicialização do driver, por exemplo, 
+se você quiser configurar o driver para falar com um proxy em outra máquina, 
+utilize a versão mais verbosa com um segundo argumento cliente:
 
 .. code-block:: php
 
@@ -61,17 +62,18 @@ use the more verbose version with a second client argument:
 
 .. note::
 
-    ``$sid`` is a Sahi session ID. It's a unique string, used by the driver
-    and the Sahi proxy in order to be able to talk with each other. You should
-    fill this with ``null`` if you want Sahi to start your browser automatically
-    or with some unique string if you want to control an already started
-    browser.
+    ``$sid`` é uma sessão ID do Sahi. Ele é uma string única, usada pelo driver 
+    e o proxy Sahi afim de possibilitar a conversa com cada outro. Vôcê deve 
+    preencher isto com ``null`` se você quiser que o Sahi inicie seu navegador 
+    automaticamente ou com alguma string única se você quiser controlar um 
+    navegador já inicializado.
 
-    ``$host`` simply defines the host on which Sahi is started. It is ``localhost``
-    by default.
+    ``$host`` simplesmente define o host no qual o Sahi é iniciado. Por padrão 
+    é o ``localhost``.
 
-    ``$port`` defines a Sahi proxy port. The default one is ``9999``.
+
+    ``$port`` define a porta do proxy Sahi. O padrão inicial é ``9999``.
 
 .. _Sahi: http://sahi.co.in/w/
-.. _Sahi project website: http://sourceforge.net/projects/sahi/files/
-.. _supported by Sahi: http://sahi.co.in/w/browser-types-xml
+.. _site do projeto Sahi: http://sourceforge.net/projects/sahi/files/
+.. _suportado pelo Sahi: http://sahi.co.in/w/browser-types-xml
