@@ -1,42 +1,42 @@
 SeleniumDriver
 ==============
 
-SeleniumDriver provides a bridge for the famous `Selenium`_ tool. If you
-need legacy Selenium, you can use it right out of the box in your Mink test
-suites.
+SeleniumDriver fornece uma ponte para a famosa ferramenta `Selenium`_. 
+Se você precisar do legado Selenium, você pode usá-lo direito fora da 
+caixa nas suas suites de test Mink.
 
 .. caution::
 
-    The SeleniumRC protocol used by this driver is deprecated and does not
-    support all Mink features. For this reason, the SeleniumDriver is deprecated
-    in favor of the :doc:`/drivers/selenium2`, which is based on the new
-    protocol and is more powerful.
+    O protocolo SeleniumRC usado por este driver está obsoleto e não 
+    será suportado por todas as funcionalidades do Mink. Por esta razão, 
+    o SeleniumDriver está obsoleto a favor do :doc:`/drivers/selenium2`, 
+    que é baseado no novo protocolo e é mais poderoso.
 
-Installation
-------------
+Instalação
+----------
 
-SeleniumDriver is available through Composer:
+SeleniumDriver está disponível através do Composer:
 
 .. code-block:: bash
 
     $ composer require behat/mink-selenium-driver
 
-In order to talk with the selenium server, you should install and configure
-it first:
+Afim de conversar com o servidor selenium, você deve instalar e configurá-lo 
+primeiro:
 
-1. Download the Selenium Server from the `project website`_.
+1. Baixe o Servidor Selenium do `website do projeto`_.
 
-2. Run the server with the following command (update the version number to
-   the one you downloaded):
+2. Execute o servidor com o seguinte comando (atualize a versão para o número 
+   que você baixou):
 
    .. code-block:: bash
 
         $ java -jar selenium-server-standalone-2.44.0.jar
 
-Usage
------
+Uso
+---
 
-That's it, now you can use SeleniumDriver:
+É isso ai, agora você pode usar o SeleniumDriver:
 
 .. code-block:: php
 
@@ -45,5 +45,5 @@ That's it, now you can use SeleniumDriver:
         'firefox', 'base_url', $client
     );
 
-.. _project website: http://seleniumhq.org/download/
+.. _website do projeto: http://seleniumhq.org/download/
 .. _Selenium: http://seleniumhq.org/
