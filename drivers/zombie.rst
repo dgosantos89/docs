@@ -1,52 +1,53 @@
 ZombieDriver
 ============
 
-ZombieDriver provides a bridge for the `Zombie.js`_ browser emulator. Zombie.js
-is a headless browser emulator, written in node.js. It supports all JS interactions
-that :doc:`Selenium </drivers/selenium2>` and :doc:`Sahi </drivers/sahi>`
-do and works almost as fast as Goutte does. It is the best of both worlds
-actually, but still limited to only one browser type (Webkit). Also it is
-still slower than Goutte and requires node.js and npm to be installed on
-the system.
+O ZombieDriver fornece uma ponte para o emulador de navegador `Zombie.js`_. 
+Zombie.js é um emulador de browser headless, escrito em node.js. Ele suporta 
+todas as interações JS :doc:`Selenium </drivers/selenium2>` e :doc:`Sahi </drivers/sahi>` 
+funciona quase tão rápido quanto o Goutte faz. Atualmente ele é o melhor dos 
+dois mundos, mas ainda limitado a apenas um tipo de navegador (Webkit). Também 
+ainda é mais devagar que o Goutte e requerem que o node.js e npm estejam 
+instalados no sistema.
 
-Installation
-------------
+Instalação
+----------
 
-ZombieDriver is available through Composer:
+ZombieDriver está disponível através do Composer:
 
 .. code-block:: bash
 
     $ composer require behat/mink-zombie-driver
 
-In order to talk with a zombie.js server, you need to install and configure
-zombie.js first:
+Afim de falar com um servidor zombie.js, você precisa instalar e configurar 
+o zombie.js primeiramente:
 
-1. Install node.js by following instructions from the official site:
+1. Instale o node.js com as seguintes instruções do site oficial:
    `<http://nodejs.org/>`_.
 
-2. Install npm (node package manager) by following the instructions from
+2. Instale o npm (node package manager) pela seguinte instruções do
    `<http://npmjs.org/>`_.
 
-3. Install zombie.js with npm:
+3. Instale o zombie.js com npm:
 
     .. code-block:: bash
 
         $ npm install -g zombie
 
-After installing npm and zombie.js, you'll need to add npm libs to your ``NODE_PATH``.
-The easiest way to do this is to add:
+Depois de instalar npm e zombie.js, você precisará adicionar as bibliotecas do 
+npm em seu ``NODE_PATH``.
+A forma mais fácil de fazer isto é adicionar:
 
 .. code-block:: bash
 
     export NODE_PATH="/PATH/TO/NPM/node_modules"
 
-into your ``.bashrc``.
+em seu ``.bashrc``.
 
-Usage
------
+Uso
+---
 
-After that, you'll be able to just use ZombieDriver without manual server
-setup. The driver will do all that for you automatically:
+Depois disto, você estará capaz de usar somente o ZombieDriver sem a instalação 
+manual do servidor. O driver irá fazer tudo isto para você automaticamente:
 
 .. code-block:: php
 
@@ -54,9 +55,9 @@ setup. The driver will do all that for you automatically:
         new \Behat\Mink\Driver\NodeJS\Server\ZombieServer()
     );
 
-If you want more control during driver initialization, like for example if
-you want to configure the driver to init the server on a specific port, use
-the more verbose version:
+Se você quer mais controle durante a instalação do driver, por exemplo se você 
+quer configurar o driver para ser inicializado no servidor em uma porta 
+específica, use a versão mais verbosa:
 
 .. code-block:: php
 
@@ -66,14 +67,14 @@ the more verbose version:
 
 .. note::
 
-    ``$host`` simply defines the host on which zombie.js will be started. It's
-    ``127.0.0.1`` by default.
+    ``$host`` simplesmente define o host em que o zombie.js será inicializado. 
+    Por padrão é ``127.0.0.1``.
 
-    ``$port`` defines a zombie.js port. Default one is ``8124``.
+    ``$port`` define uma porta zombie.js. A padrão é ``8124``.
 
-    ``$nodeBin`` defines full path to node.js binary. Default one is just ``node``.
+    ``$nodeBin`` define o caminho completo do binário do node.js. Por padrão é somente ``node``.
 
-    ``$script`` defines a node.js script to start zombie.js server. If you pass
-    a ``null`` the default script will be used. Use this option carefully!
+    ``$script`` define um script node.js para inicializar um servidor zombie.js. 
+    Se você passar um ``null`` o script padrão será usado. Use está opção cuidadosamente!
 
 .. _Zombie.js: http://zombie.labnotes.org/
