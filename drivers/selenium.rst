@@ -36,7 +36,7 @@ primeiro:
 Uso
 ---
 
-É isso ai, agora você pode usar o SeleniumDriver:
+É isso aí, agora você pode usar o SeleniumDriver:
 
 .. code-block:: php
 

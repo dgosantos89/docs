@@ -1,25 +1,25 @@
 Selenium2Driver
 ===============
 
-Selenium2Driver provides a bridge for the `Selenium2 (webdriver)`_ tool.
-If you just love Selenium2, you can now use it right out of the box too.
+O Selenium2Driver fornece uma ponte para a ferramenta `Selenium2 (webdriver)`_.
+Se você ama o Selenium2, agora você pode usá-lo corretamente fora da caixa também.
 
-Installation
-------------
+Instalação
+----------
 
-Selenium2Driver is available through Composer:
+O Selenium2Driver está disponível através do Composer:
 
 .. code-block:: bash
 
     $ composer require behat/mink-selenium2-driver
 
-In order to talk with selenium server, you should install and configure it
-first:
+Afim de falar com o servidor do selenium, você deve instalar e confirá-lo 
+primeiramente:
 
-1. Download the Selenium Server from the `project website`_.
+1. Faça o Download do Servidor do Selenium do `site do projeto`_.
 
-2. Run the server with the following command (update the version number to
-   the one you downloaded):
+2. Execute o servidor com o seguinte comando (altere a versão para o número 
+   que você baixou):
 
    .. code-block:: bash
 
@@ -27,23 +27,22 @@ first:
 
 .. tip::
 
-    The Selenium2Driver actually relies on the WebDriver protocol defined
-    by Selenium2. This means that it is possible to use it with other implementations
-    of the protocol. Note however that other implementations may have some
-    bugs.
+    O Selenium2Driver atualmente confia no protocolo WebDriver definido pelo 
+    Selenium2. Isto significa que é possível usá-lo em outras implementações 
+    do protocolo. Nove, porém, que outras implementações podem ter alguns bugs.
 
-    The testsuite of the driver is run against the `Phantom.js implementation`_
-    but it still triggers some failures because of bugs in their implementation.
+    A suite de testes do driver é executada contra a `implementação Phantom.js`_ 
+    mas ainda desencadeia algumas falhas devido os bugs na sua implementação.
 
-Usage
------
+Uso
+---
 
-That's it, now you can use Selenium2Driver:
+É isso aí, agora você pode usar o Selenium2Driver:
 
 .. code-block:: php
 
     $driver = new \Behat\Mink\Driver\Selenium2Driver('firefox');
 
-.. _Phantom.js implementation: http://phantomjs.org/
-.. _project website: http://seleniumhq.org/download/
+.. _implementação Phantom.js: http://phantomjs.org/
+.. _site do projeto: http://seleniumhq.org/download/
 .. _Selenium2 (webdriver): http://seleniumhq.org/
