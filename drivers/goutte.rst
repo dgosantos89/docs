@@ -1,20 +1,20 @@
 GoutteDriver
 ============
 
-GoutteDriver provides a bridge for the `Goutte`_ headless browser. Goutte
-is a classical pure-php headless browser, written by the creator of the Symfony
-framework Fabien Potencier.
+GoutteDriver fornece uma ponte para o `Goutte`_ headless browser. Goutte 
+é um clássico php-puro headless browser, escrito pelo criador do framework 
+Symfony Fabien Potencier.
 
 .. note::
 
-    The GoutteDriver extends the :doc:`/drivers/browserkit` to fix a small
-    edge case in the Goutte implementation of BrowserKit. It is also able
-    to instantiate the Goutte client automatically.
+    O GoutteDriver estende-se do :doc:`/drivers/browserkit` para consertar 
+    um caso extremamente pequeno na implementação Goutte do Browserkit. Ele 
+    também é capaz de instanciar o cliente Goutte automaticamente.
 
-Installation
-------------
+Instalação
+----------
 
-GoutteDriver is a pure PHP library available through Composer:
+GoutteDriver é uma biblioteca PHP pura disponibilizada através do Composer:
 
 .. code-block:: bash
 
@@ -22,28 +22,27 @@ GoutteDriver is a pure PHP library available through Composer:
 
 .. note::
 
-    GoutteDriver is compatible with both Goutte 1.x which relies on `Guzzle 3`_
-    and Goutte 2.x which relies on `Guzzle 4+`_ for the underlying HTTP implementation.
+    GoutteDriver é compatível em ambos Goutte 1.x o qual confia no `Guzzle 3`_ 
+    e Goutte 2.x o qual confia no `Guzzle 4+`_ para a implementação HTTP adjacente.
 
-    Composer will probably select Goutte 2.x by default.
+    O Composer provavelmente irá selecionar o Goutte 2.x por padrão.
 
-Usage
------
+Uso
+---
 
-In order to talk with Goutte, you should instantiate a
-``Behat\Mink\Driver\GoutteDriver``:
+Afim de falar com o Goutte, você deverá instanciar um ``Behat\Mink\Driver\GoutteDriver``:
 
 .. code-block:: php
 
     $driver = new \Behat\Mink\Driver\GoutteDriver();
 
-Also, if you want to configure Goutte more precisely, you could do the full
-setup by hand:
+Também, se você quiser configurar o Goutte com maior precisão, você poderia fazer 
+a configuração total na mão:
 
 .. code-block:: php
 
     $client = new \Goutte\Client();
-    // Do more configuration for the Goutte client
+    // Faça mais configurações para o cliente Goutte
 
     $driver = new \Behat\Mink\Driver\GoutteDriver($client);
 
