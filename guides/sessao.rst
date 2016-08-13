@@ -10,7 +10,7 @@ ser feito com isto antes de iniciá-lo.
 
 .. code-block:: php
 
-    // Escolher um driver Mink. Mais sobre isto nos capitulos seguintes.
+    // Escolha um driver Mink. Veja mais sobre isto nos capítulos seguintes.
     $driver = new \Behat\Mink\Driver\GoutteDriver();
 
     $session = new \Behat\Mink\Session($driver);
@@ -22,7 +22,7 @@ ser feito com isto antes de iniciá-lo.
 
     O primeiro argumento do construtor da sessão é um objeto driver. Drivers 
     são a forma de abstração que as camadas Mink trabalham. Você irá descobrir 
-    mais sobre os drivers disponíveis em um :doc: `capitulo posterior </guides/drivers>`.
+    mais sobre os drivers disponíveis em um :doc:`capitulo posterior </guides/drivers>`.
 
 .. caution::
 
@@ -34,8 +34,8 @@ ser feito com isto antes de iniciá-lo.
 Interação Básica no Navegador
 -----------------------------
 
-Agora que sua sessão é iniciada, você irá querer abrir uma página com ele. 
-Apenas depois de começar, a sessão não é em qualquer página (em um navegador 
+Agora que sua sessão está iniciada, você irá querer abrir uma página com ele. 
+Apenas depois de começar, a sessão não está em uma página qualquer (em um navegador 
 real, você estaria na página ``about:blank``), e chamando qualquer outra ação 
 é provável que falhe.
 
@@ -46,7 +46,7 @@ real, você estaria na página ``about:blank``), e chamando qualquer outra açã
 .. note::
 
     Mink é principalmente projetado para ser usado para testar websites. 
-    Para que você possa navegar e páginas de erro de teste, o método 
+    Para que você possa navegar e testar páginas de erro, o método 
     ``Session:visit`` não considera códigos de status de erro como inválida. 
     Ele *não* irá lançar uma exceção neste caso. Você irá precisar checar 
     o código do status (ou certo texto na página) para saber se a resposta 
@@ -55,9 +55,9 @@ real, você estaria na página ``about:blank``), e chamando qualquer outra açã
 Interagindo com a Página
 ------------------------
 
-A sessão dá acesso a página através do método ``Session::getPage`` método. 
-Isto lhe permite :doc:`analisar a página </guides/analisando-paginas>`, 
-:doc:`interagir </guides/interagindo-com-paginas>` com eles. Os próximos 
+A sessão dá acesso a página através do método ``Session::getPage``. 
+Isto lhe permite :doc:`analisar a página </guides/analisando-paginas>` e 
+:doc:`interagir </guides/interagindo-com-paginas>` com elas. Os próximos 
 capítulos cobrem a página API com profundidade. A maioria do que você vai 
 fazer com Mink usará este objeto, mas você pode continuar lendo para saber 
 mais sobre Sessão.
@@ -85,23 +85,23 @@ A sessão pode manipular cookies disponíveis no navegador.
 .. code-block:: php
 
     // definir cookie:
-    $session->setCookie('cookie name', 'value');
+    $session->setCookie('cookie nome', 'valor');
 
     // obter cookie:
-    echo $session->getCookie('cookie name');
+    echo $session->getCookie('cookie nome');
 
     // deletar cookie:
-    $session->setCookie('cookie name', null);
+    $session->setCookie('cookie nome', null);
 
 .. note::
 
     Com drivers que usam o JavaScript para controlar o navegador - como Sahi - 
-    que pode ser restringido a acessar/definir tudo, mas `HttpOnly cookies`_.
+    que pode ser restringido a acessar/definir tudo, mas `Cookies HttpOnly`_.
 
 Código de Status de Recuperação
 -------------------------------
 
-A sessão permite você recuperar o código HTTP do status da resposta:
+A sessão lhe permite recuperar o código HTTP do status da resposta:
 
 .. code-block:: php
 
@@ -110,14 +110,14 @@ A sessão permite você recuperar o código HTTP do status da resposta:
 Gerenciamento de Headers
 ------------------------
 
-A sessão permite você manipular request de headers e acessar response de headers:
+A sessão lhe permite manipular request de headers e acessar a resposta dos headers:
 
 .. code-block:: php
 
     // definindo linguagem do navegador:
     $session->setRequestHeader('Accept-Language', 'fr');
 
-    // recuperação de response de headers:
+    // recuperação da resposta do headers:
     print_r($session->getResponseHeaders());
 
 .. note::
@@ -150,7 +150,7 @@ O método pode também ser usado para reiniciar uma autenticação prévia:
 Avaliação do Javascript
 -----------------------
 
-A sessão permite você executar ou avaliar Javascript.
+A sessão lhe permite executar ou avaliar Javascript.
 
 .. code-block:: php
 
@@ -208,7 +208,7 @@ em seus métodos de teste ``destruir``:
 Parar a sessão é a melhor maneira de reiniciar a sessão ao estado inicial. 
 Ele irá fechar o seu navegador inteiramente. Para usar a sessão novamente, 
 você precisa iniciar a sessão antes de qualquer outra ação. O atalho 
-``Session::restart`` permite você fazer estas 2 chamadas em uma única chamada.
+``Session::restart`` permite você fazer estas 2 chamadas em uma única.
 
 A desvantagem de fechar o navegador e iniciá-lo novamente é que leva tempo. 
 Em muitos casos, um nível mais baixo de isolamento é o suficiente a favor de 
@@ -219,4 +219,4 @@ do navegador ao limite das possibilidades do driver.
 Levando tudo isto em conta, por padrão é recomendado usar ``Session::reset()`` 
 e chamar ``Session::stop()`` quando você realmente precisar de isolamento completo.
 
-.. _HttpOnly cookies: http://en.wikipedia.org/wiki/HTTP_cookie#HttpOnly_cookie
+.. _Cookies HttpOnly: http://en.wikipedia.org/wiki/HTTP_cookie#HttpOnly_cookie
