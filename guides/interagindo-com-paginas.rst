@@ -7,13 +7,13 @@ O elemento Mink API permite você interagir com elementos da página.
 Interagindo com Links e Botões
 ------------------------------
 
-Os métodos ``NodeElement::click`` e ``NodeElement::press`` permitem você clicar 
+Os métodos ``NodeElement::click`` e ``NodeElement::press`` lhe permitem clicar 
 nos links e apertar os botões na página.
 
 .. note::
 
     Estes métodos atualmente são equivalentes internamente (pressionar um botão
-    envolve clicá-lo). Tento ambos os métodos permitindo manter o código mais legível.
+    envolve clicá-lo). Tendo ambos os métodos permite manter o código mais legível.
 
 .. _interagindo-com-formularios:
 
@@ -26,8 +26,7 @@ com formulários:
 ``NodeElement::getValue``
     pega o valor de um campo do formulário. O valor depende do tipo do campo:
 
-    - o valor da opção selecionada para caixas de seleção individuais (ou 
-    ``null`` quando nenhuma é selecionada);
+    - o valor da opção selecionada para caixas de seleção individuais (ou ``null`` quando nenhuma é selecionada) ;
     - um array dos valores das opções selecionadas para multiplas caixas de seleção;
     - o valor do campo checkbox quando checado, ou ``null`` quando não checado;
     - o valor do radio button selecionado no grupo de radio para radio buttons;
