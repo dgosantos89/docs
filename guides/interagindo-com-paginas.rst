@@ -34,11 +34,11 @@ com formulários:
     - um valor indefinido para campos de arquivos (devido as limitações do navegador).
 
 ``NodeElement::setValue``
-    coloca o valor de um campo do formulário
+    coloca o valor em um campo do formulário
 
-    - para um campo de arquivo, deveria ser o caminho para o arquivo;
-    - para um checkbox, deveria ser um booleano indicando se está checado;
-    - para outros campos, deveria corresponder o comportamento de ``getValue``.
+    - para um campo de arquivo, deve ser o caminho para o arquivo;
+    - para um checkbox, deve ser um booleano indicando se está checado;
+    - para outros campos, deve corresponder o comportamento de ``getValue``.
 
 ``NodeElement::isChecked``
     informa se um radio button ou um checkbox está checado.
