@@ -6,7 +6,7 @@ de navegadores diferentes, frequentemente escritas em diferentes linguagens?
 Através dos drivers! Um driver Mink é uma classe simples, que implementa 
 ``Behat\Mink\Driver\DriverInterface``. Esta interface descreve metodos pontes 
 entre o Mink e os emuladores de navegadores reais. Ele não sabe nada sobre como 
-inicar/parar ou atravessar página nesse emulador de navegador em particular. Ele 
+inicar/parar ou analisar uma página nesse emulador de navegador em particular. Ele 
 somente sabe que método do driver que deve chamar para fazer isso.
 
 O Mink vem com seis drivers fora da caixa:
@@ -26,11 +26,11 @@ O Mink vem com seis drivers fora da caixa:
 Suporte a recursos do driver
 ----------------------------
 
-Apesar do Mink faça o seu melhor em remover as diferenças entre navegador e 
+Apesar do Mink fazer o seu melhor em remover as diferenças entre navegador e 
 diferentes emuladores de navegador, ele não pode fazer muito em alguns casos. 
 Por exemplo, BrowserKitDriver não avalia JavaScript e Slenium2Driver não consegue 
 pegar código dos status das respostas. Nestes casos, o driver sempre irá lançar 
-uma ``Behat\Mink\Exception\UnsupportedDriverActionException`` exceção.
+uma exceção ``Behat\Mink\Exception\UnsupportedDriverActionException``.
 
 =================================  =================  =========  ======  ========  ====
 Funcionalidade                     BrowserKit/Goutte  Selenium2  Zombie  Selenium  Sahi
