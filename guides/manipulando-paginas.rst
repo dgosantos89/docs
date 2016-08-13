@@ -1,7 +1,7 @@
 Manipulando Páginas
 ===================
 
-Uma vez que você :doc:`pegue um elemento da página </guides/analisando-paginas>, 
+Uma vez que você :doc:`pegue um elemento da página </guides/analisando-paginas>`, 
 você vai querer manipulá-lo. Você pode também interagir com a página, que é 
 coberta no :doc:`próximo capitulo </guides/interagindo-com-paginas>`.
 
