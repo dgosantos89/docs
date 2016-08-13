@@ -8,8 +8,8 @@ coberta no :doc:`próximo capitulo </guides/interagindo-com-paginas>`.
 Obtendo o nome da tag
 ---------------------
 
-O método ``NodeElement::getTagName`` permite você a obter o nome da tag do 
-elemento. Este nome da tag é sempre retornado em letras minúsculas.
+O método ``NodeElement::getTagName`` lhe permite obter o nome da tag do 
+elemento. Este nome é sempre retornado em letras minúsculas.
 
 .. code-block:: php
 
