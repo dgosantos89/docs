@@ -1,7 +1,7 @@
 Analisando Páginas
 ==================
 
-A maioria dos usos do Mink envolverão trabalhar com a página aberta em seu 
+A maioria dos usos do Mink envolverá trabalhar com a página aberta em seu 
 navegador. Isto é feito graças ao poderoso Elemento API. Esta API permite 
 a análise da página (similar ao DOM em Javascript), :doc:`manipular elementos da página </guides/manipulando-paginas>`
 e para :doc:`interegir com eles </guides/interagindo-com-paginas>`, o qual 
@@ -128,11 +128,11 @@ Seletores Named
 
 Seletores named fornecem um conjunto de queries para necessidades 
 comuns. Para condições baseadas no conteúdo dos elementos, o seletor named 
-irá tentar encontrar a primeira correspondência exata. Será então um retorno 
-correspondente parcial no caso de não obter uma correspondência exata.
+irá tentar encontrar a primeira correspondência exata. No caso de não obter 
+uma correspondência exata será então um retorno correspondente parcial.
 
 Para o tipo seletor named, o segundo argumento para o método ``find()`` 
-é um array com 2 elementos: o nome da query irá usar e o valor da busca 
+é um array com 2 elementos: o nome da query que irá usar e o valor da busca 
 nesta query:
 
 .. code-block:: php

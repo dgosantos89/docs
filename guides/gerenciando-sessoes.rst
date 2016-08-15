@@ -1,7 +1,7 @@
 Gerenciando Sessões
 ===================
 
-Apesar do :doc:`objeto de sessão </guias/sessao>` já está utilizável o suficiente, 
+Apesar do :doc:`objeto de sessão </guides/sessao>` já estar utilizável o suficiente, 
 não é tão fácil escrever um código multissessão (multidriver/multinavegador). Sim, 
 você ouviu direito, com o Mink você pode manipular múltiplos emuladores de 
 navegador simultaneamente com uma única API consistente:
@@ -43,7 +43,7 @@ um único objeto contêiner:
 
 .. note::
 
-    O Mink sempre irá iniciar ocioso suas sessões quando necessário (na primeira 
+    O Mink sempre irá iniciar suas sessões ociosas quando necessário (na primeira 
     chamada ``getSession()``). Então, o navegador não será inicial até que você 
     realmente precise dele!
 
@@ -53,7 +53,7 @@ Ou você até pode omitir o nome da sessão em casos padrão:
 
     $mink->getSession()->visit('http://my_project.dev/chat.php');
 
-Esta chamada é possível graças ào ``$mink->setDefaultSessionName('goutte')`` 
+Esta chamada é possível graças ao ``$mink->setDefaultSessionName('goutte')`` 
 configurado previamente. Nós criamos a sessão padrão, que seria devolvida na 
 chamada sem argumentos ``getSession()``.
 
