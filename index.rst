@@ -72,11 +72,11 @@ Aprenda Mink com as guias de tópicos:
 
     de-relance
     guides/sessao
-    guides/analisando-paginas
+    guides/atravessando-paginas
     guides/manipulando-paginas
     guides/interagindo-com-paginas
     guides/drivers
-    guides/gerenciando-sessoes
+    guides/gerindo-sessoes
 
 Ferramentas de Teste de Integração
 ----------------------------------
