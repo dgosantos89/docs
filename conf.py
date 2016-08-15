@@ -196,7 +196,7 @@ htmlhelp_basename = 'Minkdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Mink.tex', u'Mink Documentation', 'manual'),
+  ('index', 'Mink.tex', u'Mink Documentation', u'Konstantin Kudryashov (everzet)', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -228,7 +228,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'behat', u'Mink Documentation', 1)
+    ('index', 'behat', u'Mink Documentation', 
+     [u'Konstantin Kudryashov (everzet)'], 1)
 ]
 
 
