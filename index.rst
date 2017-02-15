@@ -1,6 +1,8 @@
 Bem vindo a documentação do Mink!
 =================================
 
+Esta é uma tradução não oficial feita e mantida por `Diego Santos`_, portanto pode estar desatualizada. Sinta-se encorajado para me ajudar a mantê-la atualizada.  
+
 Uma das partes mais importantes da web é o navegador. Navegador é a janela onde através
 dela usuários web interagem com aplicações web e outros usuários. Usuários estão 
 sempre falando com aplicações web através dos navegadores.
@@ -91,3 +93,4 @@ O mink tem integrações com muitas ferramentas de teste:
 .. _Composer: https://getcomposer.org
 .. _PHPUnit: http://www.phpunit.de
 .. _phpunit-mink package: https://github.com/minkphp/phpunit-mink
+.. _Diego Santos: http://dgosantos89.github.io/
